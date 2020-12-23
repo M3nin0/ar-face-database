@@ -7,6 +7,9 @@ wget http://cbcsl.ece.ohio-state.edu/protected-dir/dbf2.tar
 wget http://cbcsl.ece.ohio-state.edu/protected-dir/dbf3.tar
 wget http://cbcsl.ece.ohio-state.edu/protected-dir/dbf4.tar
 wget http://cbcsl.ece.ohio-state.edu/protected-dir/dbf5.tar
+wget http://cbcsl.ece.ohio-state.edu/protected-dir/dbf6.tar.Z
+wget http://cbcsl.ece.ohio-state.edu/protected-dir/dbf7.tar.Z
+wget http://cbcsl.ece.ohio-state.edu/protected-dir/dbf8.tar.Z
 
 # prepare dbf1
 mv dbf1.tar.tar dbf1.tar
@@ -39,12 +42,31 @@ uncompress dbf5/*.Z
 
 mv dbf5.tar dbfs/
 
+# prepare dbf6
+uncompress dbf6.tar.Z
+tar -xvf dbf6.tar
+
+mv dbf6.tar dbfs/
+
+# prepare dbf7
+uncompress dbf7.tar.Z
+tar -xvf dbf7.tar
+
+mv dbf7.tar dbfs/
+
+# prepare dbf8
+uncompress dbf8.tar.Z
+tar -xvf dbf8.tar
+
+mv dbf8.tar dbfs/
+
 # merge files
 mkdir -p merge
 mv {dbf1,dbf2,dbf3,dbf4,dbf5}/*.raw merge
+mv {dbfaces6,dbfaces7,dbfaces8}/*.raw merge
 
 # remove old files
-rm -rf {dbf1,dbf2,dbf3,dbf4,dbf5}
+rm -rf {dbf1,dbf2,dbf3,dbf4,dbf5,dbfaces6,dbfaces7,dbfaces8}
 
 # Convert .raw files to .jpeg
 # Adapted from: https://github.com/matheustguimaraes/organize-AR-face-db.git
