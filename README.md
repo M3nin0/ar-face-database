@@ -1,6 +1,9 @@
 # ar-face-database
 
-Scripts para preparar o conjunto de dados AR Face Database para uso com **AutoEncoders**.
+- Docente: Dr. Marcos Quiles
+- Discente: Felipe Menino
+
+Scripts para preparar o conjunto de dados AR Face Database para uso com **AutoEncoders**. Criado no contexto do **Projeto 4** da disciplina de neurocomputação do Instituto Nacional de Pesquisas Espaciais.
 
 **Fluxo de operação**
 
